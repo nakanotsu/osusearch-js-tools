@@ -22,10 +22,12 @@ $(document).ready(function()  {
 //osu beatset extractor
 $(document).ready(function()  {
 	var count = 0;
+	var pretty = [];
 	document.querySelectorAll(".beatmap-icon-container a:nth-child(1)").forEach(osumap => {
 		count+=1;						
 		id = $(osumap).attr('href').replace( /^\D+/g, '').replace(/\/.*/, '');
-		console.log(id);       
-	});
+		pretty.push(id);
+	});	
+	console.log(pretty.join(','));
 	console.log('finished extracting (',count,') ヽ(￣д￣;)ノ=3=3=3');
 });
