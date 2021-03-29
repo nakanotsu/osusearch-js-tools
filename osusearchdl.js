@@ -31,3 +31,16 @@ $(document).ready(function()  {
 	console.log(pretty.join(','));
 	console.log('finished extracting (',count,') ヽ(￣д￣;)ノ=3=3=3');
 });
+
+//auto next
+$(document).ready(function()  {
+	var time = 1000;
+	var time_0 = 0;
+	var loops = 1000;
+	for (i = 0; i < loops; i++) {
+		setTimeout( function(){				
+			document.querySelector("#beatmap-container > div.one.column.row.infinite-scroll > div > span > a:nth-child(3)").click();	
+        }, time_0);		
+	time_0 += time;	
+	}	
+});
